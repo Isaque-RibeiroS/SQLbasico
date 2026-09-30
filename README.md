@@ -51,3 +51,12 @@ Criação de atalhos de consulta denominada como **VIEW**, tendo como exemplo 2 
 - **reserva_paciente:** Seleciona nomes de pacientes e suas respectivas reservas.
 - **leito_reserva_email:** Seleção do n° dos quartos e tipo em uma data reservada, 
 indicando o email do paciente ocupante da reserva.
+
+## cte
+
+Uso de **CTEs** para simplificação de uma consulta que exige uma estrutura lógica mais complexa. Está consulta trata-se de mostrar a porcentagem de ocupação de reservas de leitos categorizados por tipo, para isso, foi necessário criar **2 CTEs** para abstração da consulta requerida, sendo elas:
+
+- **total_reservas:** Retorna o total de reservas registradas.
+- **reservas_por_tipo:** Retorna o n° de reservas para cada tipo de leito, sendo eles: **UTI/Enfermaria/Pediátrico**
+
+Em seguida foi usado o comando de consulta **SELECT** que chamou as duas **CTEs** criadas e suas respectivas colunas, mostrando o tipo de leito, a quantidade de ocupação e percentual de cada tipo em relação ao total de reservas.
